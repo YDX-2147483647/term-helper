@@ -2,6 +2,10 @@
 
 Show `<abbr>`'s `title` and further detail when hovering or tapped.
 
----
+## Usage
 
-Inspired by [ICANN website](https://www.icann.org/). ([One of their pages](https://www.icann.org/resources/pages/new-rirs-criteria-2012-02-25-en) and their [glossary_terms.js](https://www.icann.org/glossary_terms.js))
+See [`example.html`](example.html) (and [`src/example.scss`](src/example.scss)).
+
+## Inspired by
+
+[ICANN website](https://www.icann.org/). ([One of their pages](https://www.icann.org/resources/pages/new-rirs-criteria-2012-02-25-en) and their [glossary_terms.js](https://www.icann.org/glossary_terms.js))

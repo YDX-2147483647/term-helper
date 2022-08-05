@@ -1,0 +1,58 @@
+@keyframes slide-in {
+    from {
+        top: 110%;
+    }
+    to {
+        top: 70%;
+    }
+}
+@keyframes delayed-hide {
+    from {
+        // overwrite the `hidden` attribute
+        display: block;
+    }
+
+    99% {
+        display: block;
+    }
+
+    to {
+        display: none;
+    }
+}
+
+// `callout.className`
+.term-callout {
+    position: fixed;
+    top: 70%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    // Slide in after `display` becomes `block`
+    animation: 0.5s slide-in;
+
+    padding: 0.5em 2em 1em;
+    box-shadow: 0 -0.5em 0.5em gray;
+
+    &[hidden] {
+        top: 110%;
+        display: block;
+        transition: top 0.5s;
+        
+        // Set `display` to `none` finally for screen readers.
+        animation: 0.5s delayed-hide;
+    }
+}
+
+// `term.selector`
+abbr {
+    cursor: help;
+    text-decoration: underline dotted;
+    transition: background-color 0.5s;
+
+    // `term.markedClassName`
+    &.active {
+        background-color: blanchedalmond;
+    }
+}
