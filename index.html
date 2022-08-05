@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Term Helper</title>
+    <script type='module'>
+        import { TermHelper } from "./dist/index.mjs"
+
+        
+        const helper = new TermHelper({
+            ABC: {
+                title: 'ABC Help!'
+            },
+            DEF: {
+                title: 'DEF',
+                description: 'Description.'
+            }
+        })
+        helper.on(document.body)
+    </script>
+</head>
+
+<body>
+    <h1>Term Helper</h1>
+
+    A <abbr>ABC</abbr>, D <abbr>DEF</abbr>.
+</body>
+
+</html>
